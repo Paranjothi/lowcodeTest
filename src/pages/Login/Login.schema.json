@@ -1,0 +1,151 @@
+{
+  "name": "Login",
+  "customActions": [],
+  "allowAdd": true,
+  "allowEdit": true,
+  "allowDelete": true,
+  "allowView": true,
+  "attributes": [
+    {
+      "attrName": "_id",
+      "type": "String"
+    },
+    {
+      "attrName": "isActive",
+      "type": "Boolean"
+    },
+    {
+      "attrName": "createdAt",
+      "type": "Date"
+    },
+    {
+      "attrName": "updatedAt",
+      "type": "Date"
+    },
+    {
+      "attrName": "addedBy",
+      "type": "ObjectId",
+      "ref": "user"
+    },
+    {
+      "attrName": "updatedBy",
+      "type": "ObjectId",
+      "ref": "user"
+    }
+  ],
+  "screenLayout": {
+    "singlePageForm": "doubleLine",
+    "listing": {
+      "name": "Table layout",
+      "description": "Select properties you want to manage for tables on react theme page listing.",
+      "config": {
+        "paginate": true,
+        "limitSetup": 10,
+        "dataCount": true,
+        "search": true,
+        "sorting": true,
+        "optionToEnable": true,
+        "rowSelection": true
+      }
+    },
+    "loader": "pageLoading"
+  },
+  "actions": [
+    {
+      "category": "addEdit",
+      "attributes": []
+    },
+    {
+      "category": "listing",
+      "attributes": [
+        {
+          "attrName": "isActive",
+          "label": "Is Active",
+          "inputType": "CheckboxWidget",
+          "type": "Boolean",
+          "sequence": 0
+        },
+        {
+          "attrName": "createdAt",
+          "label": "Created At",
+          "inputType": "DatePicker",
+          "type": "Date",
+          "sequence": 1
+        },
+        {
+          "attrName": "updatedAt",
+          "label": "Updated At",
+          "inputType": "DatePicker",
+          "type": "Date",
+          "sequence": 2
+        },
+        {
+          "attrName": "addedBy",
+          "label": "Added By",
+          "inputType": "RefWidget",
+          "type": "ObjectId",
+          "ref": "user",
+          "sequence": 3,
+          "valueAttribute": "_id",
+          "displayAttribute": "username"
+        },
+        {
+          "attrName": "updatedBy",
+          "label": "Updated By",
+          "inputType": "RefWidget",
+          "type": "ObjectId",
+          "ref": "user",
+          "sequence": 4,
+          "valueAttribute": "_id",
+          "displayAttribute": "password"
+        }
+      ]
+    },
+    {
+      "category": "detailView",
+      "attributes": [
+        {
+          "attrName": "isActive",
+          "label": "Is Active",
+          "inputType": "CheckboxWidget",
+          "type": "Boolean",
+          "sequence": 0
+        },
+        {
+          "attrName": "createdAt",
+          "label": "Created At",
+          "inputType": "DatePicker",
+          "type": "Date",
+          "sequence": 1
+        },
+        {
+          "attrName": "updatedAt",
+          "label": "Updated At",
+          "inputType": "DatePicker",
+          "type": "Date",
+          "sequence": 2
+        },
+        {
+          "attrName": "addedBy",
+          "label": "Added By",
+          "inputType": "RefWidget",
+          "type": "ObjectId",
+          "ref": "user",
+          "sequence": 3,
+          "valueAttribute": "_id",
+          "displayAttribute": "username"
+        },
+        {
+          "attrName": "updatedBy",
+          "label": "Updated By",
+          "inputType": "RefWidget",
+          "type": "ObjectId",
+          "ref": "user",
+          "sequence": 4,
+          "valueAttribute": "_id",
+          "displayAttribute": "password"
+        }
+      ]
+    }
+  ]
+}
