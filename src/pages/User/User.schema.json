@@ -1,0 +1,196 @@
+{
+  "name": "user",
+  "customActions": [],
+  "allowAdd": true,
+  "allowEdit": true,
+  "allowDelete": true,
+  "allowView": true,
+  "attributes": [
+    {
+      "attrName": "_id",
+      "type": "String"
+    },
+    {
+      "attrName": "username",
+      "type": "String"
+    },
+    {
+      "attrName": "password",
+      "type": "String"
+    },
+    {
+      "attrName": "email",
+      "type": "String"
+    },
+    {
+      "attrName": "name",
+      "type": "String"
+    },
+    {
+      "attrName": "isActive",
+      "type": "Boolean"
+    },
+    {
+      "attrName": "createdAt",
+      "type": "Date"
+    },
+    {
+      "attrName": "updatedAt",
+      "type": "Date"
+    },
+    {
+      "attrName": "addedBy",
+      "type": "ObjectId",
+      "ref": "user"
+    },
+    {
+      "attrName": "updatedBy",
+      "type": "ObjectId",
+      "ref": "user"
+    },
+    {
+      "attrName": "role",
+      "type": "Number",
+      "enum": {
+        "User": 2,
+        "Admin": 1
+      }
+    }
+  ],
+  "screenLayout": {
+    "singlePageForm": "doubleLine",
+    "listing": {
+      "name": "Table layout",
+      "description": "Select properties you want to manage for tables on react theme page listing.",
+      "config": {
+        "paginate": true,
+        "limitSetup": 10,
+        "dataCount": true,
+        "search": true,
+        "sorting": true,
+        "optionToEnable": true,
+        "rowSelection": true
+      }
+    },
+    "loader": "pageLoading"
+  },
+  "actions": [
+    {
+      "category": "addEdit",
+      "attributes": [
+        {
+          "attrName": "username",
+          "label": "Username",
+          "inputType": "InputWidget",
+          "type": "String",
+          "sequence": 0,
+          "noEdit": true
+        },
+        {
+          "attrName": "password",
+          "label": "Password",
+          "inputType": "InputWidget",
+          "type": "String",
+          "noEdit": true,
+          "search": true,
+          "sorting": true,
+          "sequence": 1
+        },
+        {
+          "attrName": "email",
+          "label": "Email",
+          "inputType": "InputWidget",
+          "type": "String",
+          "noEdit": true,
+          "search": true,
+          "sorting": true,
+          "sequence": 2
+        },
+        {
+          "attrName": "name",
+          "label": "Name",
+          "inputType": "InputWidget",
+          "type": "String",
+          "noEdit": true,
+          "search": true,
+          "sorting": true,
+          "sequence": 3
+        },
+        {
+          "attrName": "role",
+          "label": "Role",
+          "inputType": "SelectWidget",
+          "type": "Number",
+          "enum": {
+            "User": 2,
+            "Admin": 1
+          }
+        }
+      ]
+    },
+    {
+      "category": "listing",
+      "attributes": [
+        {
+          "type": "String",
+          "attrName": "username",
+          "label": "Username",
+          "inputType": "InputWidget",
+          "noEdit": false,
+          "search": true,
+          "sorting": true
+        },
+        {
+          "type": "String",
+          "attrName": "email",
+          "label": "Email",
+          "inputType": "InputWidget",
+          "noEdit": false,
+          "search": true,
+          "sorting": true
+        },
+        {
+          "type": "String",
+          "attrName": "name",
+          "label": "Name",
+          "inputType": "InputWidget",
+          "noEdit": false,
+          "search": true,
+          "sorting": true
+        }
+      ]
+    },
+    {
+      "category": "detailView",
+      "attributes": [
+        {
+          "type": "String",
+          "attrName": "username",
+          "label": "Username",
+          "inputType": "InputWidget",
+          "noEdit": false,
+          "search": true,
+          "sorting": true
+        },
+        {
+          "type": "String",
+          "attrName": "email",
+          "label": "Email",
+          "inputType": "InputWidget",
+          "noEdit": false,
+          "search": true,
+          "sorting": true
+        },
+        {
+          "type": "String",
+          "attrName": "name",
+          "label": "Name",
+          "inputType": "InputWidget",
+          "noEdit": false,
+          "search": true,
+          "sorting": true
+        }
+      ]
+    }
+  ]
+}
